@@ -4,51 +4,68 @@ import { Heart } from "lucide-react";
 
 // ✏️ EDIT SECRET MESSAGE HERE
 const SECRET_TEXT =
-  "You are not just my love — you are my home, my peace, my forever adventure. I choose you today, tomorrow, and every day after that. Thank you for being the most beautiful chapter in my story. 💕";
+  "Reeya, you are my first thought in the morning and my last wish at night. You make my world brighter, my heart fuller, and my life more meaningful than I ever thought possible. I promise to love you fiercely, gently, and completely — today, tomorrow, and for every tomorrow after that. You are my forever, my always, my everything. 💕";
 
 const SecretMessage = () => {
   const [revealed, setRevealed] = useState(false);
 
   return (
-    <section className="px-6 py-24 flex flex-col items-center text-center">
-      <h2 className="font-display text-lg tracking-[0.3em] uppercase text-primary/60 mb-12">
-        A Secret For You
-      </h2>
+    <section className="px-6 py-28 flex flex-col items-center text-center relative">
+      {/* Ambient glow */}
+      <div className="absolute inset-0 bg-romantic-gradient" />
 
-      <motion.button
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-        onClick={() => setRevealed(!revealed)}
-        className="relative w-20 h-20 flex items-center justify-center"
-      >
-        <Heart
-          className="w-20 h-20 text-primary fill-primary/80 drop-shadow-lg"
-          style={{ filter: "drop-shadow(0 0 20px hsl(340 65% 55% / 0.4))" }}
-        />
-        <span className="absolute text-primary-foreground text-xs font-display font-semibold">
-          💌
-        </span>
-      </motion.button>
+      <div className="relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="mb-12"
+        >
+          <span className="font-script text-4xl md:text-5xl text-gradient-rose">
+            A Secret For You
+          </span>
+          <p className="font-body text-muted-foreground text-lg mt-3 italic">
+            Some words are meant only for your heart
+          </p>
+        </motion.div>
 
-      <p className="text-muted-foreground font-body text-lg mt-4 mb-6">
-        Tap to reveal something special
-      </p>
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          onClick={() => setRevealed(!revealed)}
+          className="relative w-24 h-24 flex items-center justify-center animate-gentle-float"
+        >
+          <Heart
+            className="w-24 h-24 text-primary fill-primary/70"
+            style={{ filter: "drop-shadow(0 0 30px hsl(340 72% 52% / 0.5))" }}
+          />
+          <span className="absolute text-2xl">💌</span>
+        </motion.button>
 
-      <AnimatePresence>
-        {revealed && (
-          <motion.div
-            initial={{ opacity: 0, height: 0, scale: 0.95 }}
-            animate={{ opacity: 1, height: "auto", scale: 1 }}
-            exit={{ opacity: 0, height: 0, scale: 0.95 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            className="glass-card glow-rose p-8 md:p-10 max-w-lg mt-4"
-          >
-            <p className="font-body text-xl md:text-2xl leading-relaxed text-foreground/90 italic">
-              {SECRET_TEXT}
-            </p>
-          </motion.div>
-        )}
-      </AnimatePresence>
+        <p className="text-muted-foreground font-body text-lg mt-6 mb-8 italic">
+          Tap to reveal something special
+        </p>
+
+        <AnimatePresence>
+          {revealed && (
+            <motion.div
+              initial={{ opacity: 0, height: 0, scale: 0.9, y: 20 }}
+              animate={{ opacity: 1, height: "auto", scale: 1, y: 0 }}
+              exit={{ opacity: 0, height: 0, scale: 0.9, y: 20 }}
+              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+              className="glass-card-glow glow-rose p-8 md:p-12 max-w-lg"
+            >
+              <div className="w-12 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent mx-auto mb-6" />
+              <p className="font-body text-xl md:text-2xl leading-relaxed text-foreground/90 italic">
+                {SECRET_TEXT}
+              </p>
+              <div className="w-12 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent mx-auto mt-6" />
+              <p className="font-script text-xl text-primary/50 mt-4">— Yours, always</p>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
     </section>
   );
 };
