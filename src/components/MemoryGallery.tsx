@@ -5,13 +5,15 @@ import memory1 from "@/assets/memory-1.jpg";
 import memory2 from "@/assets/memory-2.jpg";
 import memory3 from "@/assets/memory-3.jpg";
 import memory4 from "@/assets/memory-4.jpg";
+import memory5 from "@/assets/memory-5.jpg";
 
 // ✏️ EDIT PHOTOS AND CAPTIONS HERE — replace images with your own photos of Reeya
 const memories = [
-  { src: memory1, caption: "The beginning of our forever", date: "Chapter One" },
-  { src: memory2, caption: "Your hand in mine — my favorite feeling", date: "Chapter Two" },
-  { src: memory3, caption: "Our little world, just us", date: "Chapter Three" },
-  { src: memory4, caption: "Every morning is beautiful with you", date: "Chapter Four" },
+  { src: memory1, caption: "Level 1: Baby Mode Activated” 😄", date: "Chapter One" },
+  { src: memory2, caption: "Acting serious… but we were literally just joking.", date: "Chapter Two" },
+  { src: memory3, caption: "Zero posing, 100% us 😌.", date: "Chapter Three" },
+  { src: memory4, caption: "Movie date — zero focus on the movie.” 😄", date: "Chapter Four" },
+
 ];
 
 const MemoryGallery = () => {

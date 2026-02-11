@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 
 // ✏️ EDIT FINAL QUESTION TEXT HERE
-const FINAL_QUESTION = "Will you keep choosing me every day, Reeya?";
+const FINAL_QUESTION = "will you keep picking me… or should I send more bad photos?” 😂";
 
 const FinalQuestion = () => {
   const containerRef = useRef<HTMLDivElement>(null);

@@ -4,7 +4,8 @@ import { Heart } from "lucide-react";
 
 // ✏️ EDIT SECRET MESSAGE HERE
 const SECRET_TEXT =
-  "Reeya, you are my first thought in the morning and my last wish at night. You make my world brighter, my heart fuller, and my life more meaningful than I ever thought possible. I promise to love you fiercely, gently, and completely — today, tomorrow, and for every tomorrow after that. You are my forever, my always, my everything. 💕";
+  "Reeya, there has been a small… technical error. My brain auto-saved your funniest photos without asking for permission.Before you press DELETE on me, just know — those pictures are my favorite because they show your real chaos mode.I promise to behave… after laughing one last time. 💻😂"
+;
 
 const SecretMessage = () => {
   const [revealed, setRevealed] = useState(false);

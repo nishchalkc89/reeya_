@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 // ✏️ EDIT ROMANTIC MESSAGE HERE
 const ROMANTIC_MESSAGE =
-  "Reeya... from the very first moment I saw you, something inside me changed forever. You became my reason to smile, my reason to dream, my reason to believe that love is the most beautiful thing in this world. Every heartbeat whispers your name. Every sunrise reminds me how lucky I am. You are not just my love — you are my entire universe. I will choose you, again and again, without pause, without doubt, in a heartbeat. Always. Forever. Only you.";
+  "Reeya… honestly I think I liked you way back in 1st year,but my confidence was still buffering 😌. After the Dashain program when we finally started talking in 3rd year,things went from “just hi-hello” to “why do I smile at my phone like this?” We got close so fast, and the way you care for me still surprises me. So yeah… this is not a big movie love speech — just me admitting that you became important to me faster than my brain could process… and I’m not even mad about it 😂💛.";
 
 const TypingHero = () => {
   const [displayedText, setDisplayedText] = useState("");
